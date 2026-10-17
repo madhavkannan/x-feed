@@ -120,7 +120,7 @@ vs.forEach(function(v){v.addEventListener('play',function(){vs.forEach(function(
 if(v.parentNode.classList)v.parentNode.classList.add('playing')});
 v.addEventListener('pause',function(){v.parentNode.classList.remove('playing')});
 v.addEventListener('error',function(){var b=v.parentNode;if(b.querySelector('.vfail'))return;b.classList.remove('playing');
-var d=document.createElement('div');d.className='vfail';d.innerHTML='Can't play here (restricted by the publisher) · <a rel="noopener noreferrer" href="'+b.dataset.x+'">Watch on x.com ↗</a>';b.appendChild(d)})});
+var d=document.createElement('div');d.className='vfail';d.innerHTML='Can’t play here (restricted by the publisher) · <a rel="noopener noreferrer" href="'+b.dataset.x+'">Watch on x.com ↗</a>';b.appendChild(d)})});
 document.querySelectorAll('video.gifv').forEach(function(v){v.tabIndex=0;function t(){if(v.paused)v.play().catch(function(){});else v.pause()}
 v.addEventListener('click',t);v.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();t()}})});})();
 </script></body></html>
